@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using MiniApi_AuthUser.Application.Service.Interface;
+using MiniApi_AuthUser.Application.Tools;
+using MiniApi_AuthUser.Domain.Model.User;
 using MiniApi_AuthUser.Domain.ViewModel.User;
 
 namespace MiniApi_AuthUser.Web.EndPoints
@@ -13,7 +15,7 @@ namespace MiniApi_AuthUser.Web.EndPoints
         public async static Task<IResult> UserList([FromServices] IUserService userService)
         {
             var user = await userService.GetAllUser();
-            return Results.Ok(user);
+            return Results.Ok(ApiResponse.Success("اطلاعات با موفقیت بازیابی شد",user));
         }
         #endregion
 
@@ -26,9 +28,9 @@ namespace MiniApi_AuthUser.Web.EndPoints
           [FromBody] CreateUserViewModel model)
         {
             if (model == null)
-                return Results.BadRequest("Please insert all item");
+                return Results.BadRequest(ApiResponse.Success("کلیه اطلاعات را وارد نمایید"));
             await userService.InsertUserAsync(model);
-            return Results.Ok("Insert user success");
+            return Results.Ok(ApiResponse.Success("کاربر با موفقیت ثبت شد"));
         }
         #endregion
     }
