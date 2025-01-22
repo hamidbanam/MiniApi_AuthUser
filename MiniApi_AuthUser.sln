@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniApi_AuthUser.Domain", "MiniApi_AuthUser.Domain\MiniApi_AuthUser.Domain.csproj", "{C0806C0C-51D1-41BF-8215-4B0A6619F5C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniApi_AuthUser.Data", "MiniApi_AuthUser.Data\MiniApi_AuthUser.Data.csproj", "{531763EB-17A0-4FF5-B96C-8E3928CF7BB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniApi_AuthUser.Application", "MiniApi_AuthUser.Application\MiniApi_AuthUser.Application.csproj", "{DF22096D-1C19-42E3-92AE-E93A124E3304}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniApi_AuthUser.IOC", "MiniApi_AuthUser.IOC\MiniApi_AuthUser.IOC.csproj", "{82EBB33F-1374-40C1-B61B-628536D4B648}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniApi_AuthUser.Web", "MiniApi_AuthUser.Web\MiniApi_AuthUser.Web.csproj", "{1EACF9B8-9F88-4DFF-AE76-46FE8E53E66C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0806C0C-51D1-41BF-8215-4B0A6619F5C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0806C0C-51D1-41BF-8215-4B0A6619F5C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0806C0C-51D1-41BF-8215-4B0A6619F5C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0806C0C-51D1-41BF-8215-4B0A6619F5C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{531763EB-17A0-4FF5-B96C-8E3928CF7BB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{531763EB-17A0-4FF5-B96C-8E3928CF7BB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{531763EB-17A0-4FF5-B96C-8E3928CF7BB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{531763EB-17A0-4FF5-B96C-8E3928CF7BB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF22096D-1C19-42E3-92AE-E93A124E3304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF22096D-1C19-42E3-92AE-E93A124E3304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF22096D-1C19-42E3-92AE-E93A124E3304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF22096D-1C19-42E3-92AE-E93A124E3304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82EBB33F-1374-40C1-B61B-628536D4B648}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82EBB33F-1374-40C1-B61B-628536D4B648}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82EBB33F-1374-40C1-B61B-628536D4B648}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82EBB33F-1374-40C1-B61B-628536D4B648}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EACF9B8-9F88-4DFF-AE76-46FE8E53E66C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EACF9B8-9F88-4DFF-AE76-46FE8E53E66C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EACF9B8-9F88-4DFF-AE76-46FE8E53E66C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EACF9B8-9F88-4DFF-AE76-46FE8E53E66C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
