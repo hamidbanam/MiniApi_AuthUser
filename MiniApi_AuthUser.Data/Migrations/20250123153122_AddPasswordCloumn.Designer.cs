@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MiniApi_AuthUser.Data.Context;
 
@@ -11,9 +12,11 @@ using MiniApi_AuthUser.Data.Context;
 namespace MiniApi_AuthUser.Data.Migrations
 {
     [DbContext(typeof(MiniApiDbContext))]
-    partial class MiniApiDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250123153122_AddPasswordCloumn")]
+    partial class AddPasswordCloumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -5,19 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MiniApi_AuthUser.Domain.Model.User
-{
-    public class User
+namespace MiniApi_AuthUser.Domain.ViewModel.User
+{ 
+    public class UpdateUserViewModel
     {
-        [Key]
         public int UserId { get; set; }
-
         [Required]
         [MaxLength(255)]
         public string UserName { get; set; }
-    
+
         public string? FullName { get; set; }
-        
+
         public int? Age { get; set; }
 
         [Required]
@@ -31,9 +29,12 @@ namespace MiniApi_AuthUser.Domain.Model.User
         [Required]
         [MaxLength(500)]
         public string Password { get; set; }
+    }
 
-        public DateTime CreateDate { get; set; }
-
-        public bool IsActive { get; set; }
+    public enum UpdateUserResult
+    {
+        Success,
+        NotFound,
+        EmailInvalid
     }
 }

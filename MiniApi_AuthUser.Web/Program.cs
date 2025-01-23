@@ -20,6 +20,7 @@ builder.Services.AddDbContext<MiniApiDbContext>(options =>
 
 #region Config service
 builder.Services.RegisterService();
+
 #endregion
 
 #region Add Authentication
@@ -30,12 +31,12 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
         ValidIssuer= "https://localhost:7013",
         ValidAudience= "https://localhost:7013",
         ValidateIssuerSigningKey=true,
-        IssuerSigningKey=new SymmetricSecurityKey(Encoding.UTF8.GetBytes("kdnksdffksdjfdsfsdfsdfsdfkdffsdfdnksdffksdjfdsfsdfsdfsdf")),
+        IssuerSigningKey=new SymmetricSecurityKey(Encoding.UTF8.GetBytes("kwOoQl4re*EniutHkn4*B9td4ulize@tatf6v1ljkldd1715ba111bdb55282621221")),
         ValidateIssuer=true,
         ValidateAudience=false,
     };
 });
-
+builder.Services.AddAuthorization();
 #endregion
 
 #region Swagger
@@ -49,15 +50,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// Configure the HTTP request pipeline.
-
-app.RegisterApis();
-
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.RegisterApis();
 
 app.Run();
 

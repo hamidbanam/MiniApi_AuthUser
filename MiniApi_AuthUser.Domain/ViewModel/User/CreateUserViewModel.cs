@@ -13,5 +13,11 @@ namespace MiniApi_AuthUser.Domain.ViewModel.User
         public int Age { get; set; }
         public string Email { get; set; }
         public string Mobile { get; set; }
+        public string Password { get; set; }
+    }
+
+    public enum CreateUserResult
+    {
+        Success,
     }
 }

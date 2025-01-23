@@ -9,7 +9,7 @@ namespace MiniApi_AuthUser.IOC.IocContainer
         public static void RegisterService(this IServiceCollection service)
         {
             service.AddScoped<IUserService,UserService>();
-            service.AddScoped<ITokenService,TokenService>();
+            service.AddScoped<ITokenService, TokenService>();
         }
     }
 }
