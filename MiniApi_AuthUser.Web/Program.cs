@@ -1,6 +1,9 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using MiniApi_AuthUser.Data.Context;
 using MiniApi_AuthUser.IOC.IocContainer;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +20,22 @@ builder.Services.AddDbContext<MiniApiDbContext>(options =>
 
 #region Config service
 builder.Services.RegisterService();
+#endregion
+
+#region Add Authentication
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(option =>
+{
+    option.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidIssuer= "https://localhost:7013",
+        ValidAudience= "https://localhost:7013",
+        ValidateIssuerSigningKey=true,
+        IssuerSigningKey=new SymmetricSecurityKey(Encoding.UTF8.GetBytes("kdnksdffksdjfdsfsdfsdfsdfkdffsdfdnksdffksdjfdsfsdfsdfsdf")),
+        ValidateIssuer=true,
+        ValidateAudience=false,
+    };
+});
+
 #endregion
 
 #region Swagger
@@ -36,6 +55,8 @@ app.RegisterApis();
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
+app.UseAuthorization();
 
 
 app.Run();

@@ -10,9 +10,10 @@ namespace MiniApi_AuthUser.IOC.IocContainer
             var userGroup = app.MapGroup("/api/users")
                 .WithTags("User");
 
+            userGroup.MapGet("/", UserEndPoint.UserList);
             userGroup.MapPost("/create-user", UserEndPoint.CreateUser);
 
-            userGroup.MapGet("/",UserEndPoint.UserList);
+         
             #endregion
             return app;
         }

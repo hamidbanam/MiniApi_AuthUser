@@ -11,7 +11,7 @@ namespace MiniApi_AuthUser.Application.Service.Implementation
         private SymmetricSecurityKey _key;
         public TokenService()
         {
-            string secrtKey = "kdnksdffksdjfdsfsdfsdfsdf";
+            string secrtKey = "kdnksdffksdjfdsfsdfsdfsdfkdffsdfdnksdffksdjfdsfsdfsdfsdf";
             byte[] data = Encoding.UTF8.GetBytes(secrtKey);
 
             _key = new SymmetricSecurityKey(data);
